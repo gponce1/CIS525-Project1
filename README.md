@@ -17,6 +17,10 @@ Responsive travel brochure created with HTML, CSS, Bootstrap, Flexbox, and CSS G
 
 GitHub Pages: https://gponce1.github.io/CIS525-Project1/
 
+## GitHub Website
+
+https://github.com/gponce1/CIS525-Project1
+
 ## Author
 
 Giovanna Ponce Cisternas
