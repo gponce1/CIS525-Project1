@@ -15,7 +15,7 @@ Responsive travel brochure created with HTML, CSS, Bootstrap, Flexbox, and CSS G
 
 ## Live Website
 
-GitHub Pages: http://gponce1.github.io/
+GitHub Pages: https://gponce1.github.io/CIS525-Project1/
 
 ## Author
 
