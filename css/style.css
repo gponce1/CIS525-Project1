@@ -1,0 +1,424 @@
+:root {
+    --primary-color: #14324a;
+    --secondary-color: #edd1c1;
+    --text-color: #4f5d65;
+    --accent-color: #ff7b6b;
+    --spacing: 20px;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+header img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: var(--spacing);
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+}
+
+/* Menu */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #2e7184;
+}
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0, 35, 55, 0.25),
+            rgba(0, 35, 55, 0.35)
+        ),
+        url("../img/bannerVina.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 100px 8%;
+
+    color: white;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 520px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    width: fit-content;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #e96557;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 500px;
+        padding: 40px 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero h4 {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        max-width: 100%;
+    }
+}
+
+/* About */
+.about-section .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Packages */
+
+.packages-section {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.packages-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    min-height: 560px;
+}
+
+.packages-content {
+    background-color: var(--secondary-color);
+    padding: 60px 70px 60px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.packages-label {
+    color: #2e7184;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.packages-content h2 {
+    color: var(--primary-color);
+}
+
+.packages-content p{
+    color: var(--text-color);
+    margin-bottom: var(--spacing);
+}
+
+
+/* Large image on the left */
+
+.packages-image {
+    min-height: 560px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(237, 209, 193, 0) 58%,
+            rgba(237, 209, 193, 0.25) 72%,
+            rgba(237, 209, 193, 0.65) 84%,
+            rgba(237, 209, 193, 0.9) 94%,
+            rgba(237, 209, 193, 1) 100%
+        ),
+        url("../img/sunset_vina.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*line*/
+    width: calc(100% + 1px);
+}
+
+
+/* Table */
+
+.packages-table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.packages-table thead th {
+    background-color: #0f566b;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+
+.packages-table tbody td {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.packages-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.package-thumb {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 992px) {
+    .packages-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .packages-image {
+        min-height: 280px;
+    }
+
+    .packages-content {
+        padding: 30px 20px;
+    }
+}
+
+/* Contact */
+
+.contact-section {
+    background-color: #fff8f2;
+    padding: 60px 0;
+}
+
+.contact-section h6 {
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-section h2 {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-section input,
+.contact-section select,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    font-size: 1rem;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+.contact-section button {
+    width: fit-content;
+
+    background-color: var(--accent-color);
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 12px 28px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #e96557;
+}
+
+.contact-section img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section img {
+        height: 280px;
+        margin-top: 25px;
+    }
+
+    .contact-section button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content img {
+    width: 160px;
+    height: auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-content img {
+        width: 140px;
+    }
+}
